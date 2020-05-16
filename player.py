@@ -1,5 +1,5 @@
 import pygame
-from MyRPG.Constants import *
+from Game_number_1.Constants import *
 
 
 def render(screen):

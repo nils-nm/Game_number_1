@@ -1,6 +1,6 @@
 import pygame
-from MyRPG.Constants import *
-from MyRPG.player import *
+from Game_number_1.Constants import *
+from Game_number_1.player import *
 
 
 class Main:
