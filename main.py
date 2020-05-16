@@ -12,7 +12,33 @@ class Main:
         self.main_loop()
 
     def handle_events(self):
-        pass
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.running = False
+
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_d:
+                    self.player.direction = RIGHT
+                    self.player.moving = [1, 0, 0, 0]
+                if event.key == pygame.K_s:
+                    self.player.direction = DOWN
+                    self.player.moving = [0, 1, 0, 0]
+                if event.key == pygame.K_a:
+                    self.player.direction = LEFT
+                    self.player.moving = [0, 0, 1, 0]
+                if event.key == pygame.K_w:
+                    self.player.direction = UP
+                    self.player.moving = [0, 0, 0, 1]
+
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_d:
+                    self.player.moving[RIGHT] = 0
+                if event.key == pygame.K_s:
+                    self.player.moving[DOWN] = 0
+                if event.key == pygame.K_a:
+                    self.player.moving[LEFT] = 0
+                if event.key == pygame.K_w:
+                    self.player.moving[UP] = 0
 
     def render(self):
         # прорисовка всего-всего
@@ -25,7 +51,9 @@ class Main:
         # основной цыкл программы
 
         while self.running is True:
+            self.player.move()
             self.render()
+            self.handle_events()
 
 
 pygame.init()
