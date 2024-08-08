@@ -2,5 +2,4 @@
 
 developments for future projects
 
-- here is the character movement 
-- array processing for drawing the level/map
+- here is the character movement

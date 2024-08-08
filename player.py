@@ -1,5 +1,5 @@
 import pygame
-from Game_number_1.Constants import *
+from Constants import *
 
 
 def render(screen):
@@ -54,4 +54,3 @@ class Player:
     def render_ui(self, screen):
 
         pass
-

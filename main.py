@@ -1,6 +1,6 @@
 import pygame
-from Game_number_1.Constants import *
-from Game_number_1.player import *
+from Constants import *
+from player import *
 
 
 class Main:
